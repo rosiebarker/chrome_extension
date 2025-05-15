@@ -1,0 +1,156 @@
+/*use -- for custom styling*/
+/*then store it as a variable using var(--variablename);*/
+
+:root {
+  --bg_colour_lm: #f1f1f1;
+  --bg_colour_dm: #2a2a3d;
+
+  --font_colour_light_mode: #222;
+  --font_colour_dark_mode: #f0f0f0;
+
+  --slide_colour_light_mode: #ffffff;
+  --slide_colour_dark_mode: #333;
+
+  --circle_colour: #006aff;
+  --circle_colour_hover: #009dff; 
+
+  --radius: 12px;
+  --padding: 24px;
+
+  --popup-width: 320px;
+  --popup-height: 450px;
+
+  --font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.mainicon {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+body {
+  padding: var(--padding);
+  font-family: var(--font-family);
+  font-size: 14px;
+  width: var(--popup-width);
+  height: var(--popup-height);
+  box-sizing: border-box;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--bg_colour_lm);
+  color: var(--font_colour_light_mode);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: var(--bg_colour_dm);
+  color: var(--font_colour_dark_mode);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#darkmodethemetoggle {
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#darkmodethemetoggle:hover {
+  transform: scale(1.2);
+}
+
+.slidercontainer label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+input[type="range"] {
+  flex: 1;
+  height: 6px;
+  appearance: none;
+  background: var(--slide_colour_light_mode);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.dark input[type="range"] {
+  background: var(--slide_colour_dark_mode);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--circle_colour);
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: var(--circle_colour_hover);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--circle_colour);
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+select:focus {
+  border-color: #000000;
+}
+
+#darkmode_web_toggle {
+  background-color: #717171;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin-top: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+#darkmode_web_toggle:hover {
+  background-color: #333; 
+}
+
+#darkmode_web_toggle:active {
+  background-color: #555;
+}

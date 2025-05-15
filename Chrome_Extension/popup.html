@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Accessibility Settings</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <img src="images/icon128.png" class="mainicon">
+  <div class="header">
+    <h2>Accessibility Settings</h2>
+    <button id="darkmodethemetoggle" title="Dark Mode Toggle">
+      <img src="images/moon.svg">
+    </button>
+  </div>
+
+  <div class="slidercontainer">
+    <label for="fontsizeslider">Font Size <span id="fontsizevalue">100%</span></label>
+    <div class="slider">
+      <img src="images/plus-square.svg" class="icon">
+      <input type="range" id="fontsizeslider" min="50" max="200" value="100">
+    </div>
+  </div>
+
+  <div class="slidercontainer">
+    <label for="lineheightslider">Line Height <span id="lineheightnumber">1.5</span></label>
+    <div class="slider">
+      <img src="images/align-justify.svg" class="icon">
+      <input type="range" id="lineheightslider" min="1" max="2" step="0.1" value="1.5">
+    </div>
+  </div>
+
+  <button id="darkmode_web_toggle">Enable Dark Mode</button>
+
+<div class="slidercontainer">
+  <label for="font_type_dropdown">Font Type</label>
+  <div class="slider">
+    <img src="images/type.svg" class="icon">
+    <select id="font_type_dropdown">
+      <option value="Arial, sans-serif">Arial</option>
+      <option value="Verdana, sans-serif">Verdana</option>
+      <option value="Georgia, serif">Georgia</option>
+      <option value="Times New Roman, serif">Times New Roman</option>
+      <option value="Courier New, monospace">Courier New</option>
+    </select>
+  </div>
+</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
